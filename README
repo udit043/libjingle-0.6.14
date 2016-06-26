@@ -1,3 +1,7 @@
+Important
+
+< If you are downloading files from here then follow steps from line number 112 >
+
 Libjingle
 
 1. Introduction
@@ -106,6 +110,9 @@ Libjingle needs to be downloaded and patched
     the directory "third_party/openssl/include/", etc.
   * To build Libjingle, first make sure the SCONS_DIR environment variable
     is set correctly.
+    
+  < Follow steps from here > 
+    
   * Second, run talk/third_party/expat-2.0.1/configure and
     talk/third_party/srtp/configure.
   * Third, go to the talk/ directory and run $path_to_swtoolkit/hammer.sh. Run
