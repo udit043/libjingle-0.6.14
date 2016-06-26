@@ -344,6 +344,7 @@ talk.Library(env, name = "videorenderer",
              ],
              lin_packages = [
                "gtk+-2.0",
+               "gthread-2.0",
              ],
 )
 talk.Library(env, name = "unittest_main",

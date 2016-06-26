@@ -28,6 +28,7 @@
 #ifndef TALK_BASE_LATEBINDINGSYMBOLTABLE_H_
 #define TALK_BASE_LATEBINDINGSYMBOLTABLE_H_
 
+#include <stddef.h>
 #include <string.h>
 
 #include "talk/base/common.h"
@@ -184,9 +185,17 @@ const char *const ClassName##_kSymbolNames[ClassName##_SYMBOL_TABLE_SIZE] = {
 
 // Returns a reference to the given late-binded symbol, with the correct type.
 #define LATESYM_GET(ClassName, inst, sym) \
-  (*reinterpret_cast<typeof(&sym)>( \
+  (*reinterpret_cast<decltype(&sym)>( \
       (inst)->GetSymbol(LATESYM_INDEXOF(ClassName, sym))))
 
 }  // namespace talk_base
 
 #endif  // TALK_BASE_LATEBINDINGSYMBOLTABLE_H_
+ /* 
+#define LATESYM_GET(ClassName, inst, sym) \
+  (*reinterpret_cast<typeof(&sym)>( \
+      (inst)->GetSymbol(LATESYM_INDEXOF(ClassName, sym))))
+
+}  // namespace talk_base
+
+ */

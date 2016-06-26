@@ -39,6 +39,11 @@
 #include <openssl/ssl.h>
 #include <openssl/x509v3.h>
 
+#include <iostream>
+#include <thread>
+#include <mutex>
+#include <unistd.h>
+
 #include "talk/base/common.h"
 #include "talk/base/logging.h"
 #include "talk/base/openssladapter.h"

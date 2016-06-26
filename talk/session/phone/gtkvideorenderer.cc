@@ -50,7 +50,7 @@ GtkVideoRenderer::GtkVideoRenderer(int x, int y)
       draw_area_(NULL),
       initial_x_(x),
       initial_y_(y) {
-  g_thread_init(NULL);
+  g_thread_init(NULL); //g_thread_init(NULL);
   gdk_threads_init();
 }
 
